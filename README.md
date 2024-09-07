@@ -15,6 +15,8 @@ Construção de uma tela de login e cadastro.
 - Jest com Testing Library;
 - TailwindCSS;
 - MaterialUI;
+- Formik;
+- Yup;
 - JSON SERVER (para simulação de requisições GET e POST)
 
 ## Instalação
@@ -22,7 +24,7 @@ Construção de uma tela de login e cadastro.
 1. Clone o respositório
 
 ```bash
-git clone https://github.com/Alecsander-Castro/desafio-itworks
+git clone https://github.com/Alecsander-Castro/desafio-viveo
 ```
 
 2. Instale as dependências
@@ -51,5 +53,5 @@ npm run test:watch
 
 ## Como usar
 
-1. Inicie a aplicação e selecione um dos dois protótipos disponíveis
-2. Navegue pelos módulos disponíveis, selecionando eles e seus submódulos
+1. Inicie a aplicação e selecione as opções disponíveis;
+2. Faça cadastro de sua conta e realize o login usando suas credenciais.
