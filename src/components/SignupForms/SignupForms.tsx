@@ -15,9 +15,12 @@ import * as yup from "yup";
 import Link from "next/link";
 import { createUser } from "@/utils/api";
 
-const TextForm = styled(Field)({
-  display: "block",
-});
+interface ISignupCredentials {
+  name: string;
+  email: string;
+  password: string;
+  re_password: string;
+}
 
 const initialValues = {
   name: "",
@@ -49,8 +52,8 @@ export default function SignupForms() {
   const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">(
     "success"
   );
-  const sleep = (ms: any) => new Promise((r) => setTimeout(r, ms));
-  const handleSubmit = async (values: any) => {
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+  const handleSubmit = async (values: ISignupCredentials) => {
     setLoading(true);
     await sleep(500);
     const response = await createUser(values);

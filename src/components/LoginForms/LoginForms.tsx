@@ -8,6 +8,11 @@ import * as yup from "yup";
 import { useState } from "react";
 import { Cached } from "@mui/icons-material";
 
+interface ILoginCredentials {
+  email: string;
+  password: string;
+}
+
 const initialValues = {
   email: "",
   password: "",
@@ -25,13 +30,13 @@ export default function LoginForms() {
   const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">(
     "success"
   );
-  const sleep = (ms: any) => new Promise((r) => setTimeout(r, ms));
-  const handleSubmit = async (values: any) => {
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+  const handleSubmit = async (values: ILoginCredentials) => {
     setLoading(true);
     await sleep(500);
     const users = await getUsers();
     const user = users.filter(
-      (user: any) =>
+      (user: ILoginCredentials) =>
         user.email === values.email && user.password === values.password
     );
     if (!user.length) {
