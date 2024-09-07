@@ -33,16 +33,16 @@ git clone https://github.com/Alecsander-Castro/desafio-viveo
 npm install
 ```
 
-3. Rode o comando para abrir a aplicação
-
-```bash
-npm run dev
-```
-
-4. Inicie o servidor do json-server
+3.Inicie o servidor do json-server 
 
 ```bash
 npm run server
+```
+
+4. Rode o comando para abrir a aplicação
+
+```bash
+npm run dev
 ```
 
 5. Caso queira rodar os testes unitários disponíveis
