@@ -33,7 +33,7 @@ git clone https://github.com/Alecsander-Castro/desafio-viveo
 npm install
 ```
 
-3.Inicie o servidor do json-server 
+3. Inicie o servidor do json-server 
 
 ```bash
 npm run server
